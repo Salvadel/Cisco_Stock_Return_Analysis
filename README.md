@@ -6,7 +6,7 @@ Conducted a detailed analysis of Cisco Systems’ 2024–2025 stock performance 
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>LaTeX</b> (via Overleaf)
+- <b>LaTeX</b>
 
 <h2>Environments Used </h2>
 
