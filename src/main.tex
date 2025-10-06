@@ -1,0 +1,147 @@
+\documentclass[12]{amsart}
+\usepackage{amsmath, amssymb, graphicx, setspace}
+\usepackage[margin=1in]{geometry}
+\doublespacing
+\vspace*{\fill}
+\title{Using Mathematical Expectation to Analyze Stock Returns}
+\author{ Salvatore Deluca \\
+Instructor : Dr. Keshav Acharya}
+
+\date{April 2025}
+
+\begin{document}
+
+\maketitle
+\centering{
+A joint research paper to analyze cisco stock returns}
+\vspace*{\fill}
+\newpage
+\begin{flushleft}
+\begin{abstract}
+The study uses probability statistics theory to calculate expected return values with the goal to evaluate Cisco Systems, Inc.'s performance in the stock market between March 2024 and March 2025. The study begins with a general overview of the expected value as an investment analysis foundation before initiating the process of data gathering within the frame of historical daily stock prices to obtain average returns, volatility, standard deviation, and a 95\% confidence interval. The findings chapter reports comparative actual vs. expected returns, and includes graphics as line graphs and bar plots of stock patterns, monthly return, and volatility over time. The essay is concluded with an interpretation of the results, including the strengths and weaknesses of using expected value models in market movement prediction.
+\end{abstract}
+
+\section{ Introduction and Theoretical Foundation}
+This research study investigates the application of mathematical expectation, or expected value, in analyzing Cisco Systems, Inc.'s stock performance over a one-year period from March 2024 to March 2025. The aim of this study is to investigate how statistical methods in conjunction with probability can be used to evaluate and interpret investment performance in a real market setting. Using the help of historical stock prices collected from reliable financial databases, returns were computed on a monthly basis using the formula for the standard return.
+\newline
+\newline
+ The work also includes a detailed estimation of the volatility of the stock, measured as the standard deviation of the daily returns. A confidence interval was constructed around the mean return to provide a probabilistic range in which future returns could be expected to fall assuming that there is a normal distribution of returns. In most confidence invervals a confidence of 95\% is taken, this offers a unbiased interval that is not too relatively high or low [4]. Visual aid, such as line graphs and bar charts are included with the data in order to illustrate Cisco's stock price patterns, distribution of return, and correspondence between expected and real performance.
+\newline
+\newline
+By analyzing the theoretical expected return obtained from historical data against actual market returns, this paper tests the viability and limitations of using expected value models in investment analysis. It also discusses how well the actual stock behavior of Cisco aligns with statistical prediction and determines possible causes why deviations from theoretical results would occur. Lastly, this project demonstrates the real world application of mathematical theory in finances.
+\newline
+\newline
+The expected value (or expected return) of an investment is the weighted average of all possible returns, where each return is weighted by its probability. In stock markets, returns are typically calculated as the percentage change in stock prices over a given period.
+\[
+E(R) = \sum_{i=1}^{n} p_i \cdot R_i
+\]
+Where $R_i$ is the return for each possible outcome, and $p_i$ is the probability of that outcome occurring. In the context of stock market returns, you may assume equal probability for each historical return.
+
+
+If we assume that the future stock price movement follows a similar pattern as its historical data, the expected return for a stock can be calculated as the average of past stock returns.
+
+\[
+E(R) = \frac{1}{N} \sum_{i=1}^{N} R_i
+\]
+Where $N$ is the total number of trading days or months, and $R_i$ is the return on day or month $i$.
+\section{Data Collection}
+To calculate our data we will be considering the price of Cisco Systems, Inc Stocks between March 2024 and March 2025. Values are taken at the beginning of each month for the duration of one year, [1].
+\bigbreak
+\centering{
+\includegraphics{Charts/Stock Price.png}
+}
+
+
+
+
+\begin{flushleft}
+\subsection{Calculation and Data Analysis} 
+\textbf{Monthly Returns:}
+In order to look at the performance of the stock over time, we calculate the monthly return, or the percentage change in price between two consecutive months. This calculation allows us to observe how the stock performed in each time period and is the foundation on which we calculate the overall expected return of the stock. The formula used to calculate each monthly return is:
+\[
+R_t = \frac{P_t - P_{t-1}}{P_{t-1}}
+\]
+\begin{flushleft}
+Where $R_t$ is the return for month $t$, $P_t$ is the closing price at the end of the month t, and $P_{t-1}$ is the closing price at the end of the month. If we use this formula on all points, we can find trends in Cisco's performance and prepare further analysis. For instance how to calculate the return for April 2024, we would insert 46.98 (April) for $P_t$ and insert 49.91 (March) for $P_{t-1}$. Which would give us a final answer of -0.0587 which is equal to -5.87\% Here is a table of all the calculated returns for each month. 
+\end{flushleft}
+
+\begin{center}
+\includegraphics{Charts/Returns.png}
+\end{center}
+
+\bigbreak
+
+\textbf{Average of Returns}
+After the computation of every monthly return period, the expected return or the average return should then be set. This figure is the average of all one-month returns in this single year time frame and the statistical projection for an investor's expected, average return during this period, in the event of purchasing Cisco stocks for one month in this period of time. In order to calculate the average return, you use the following formula:
+\[
+E(R) = \frac{1}{N} \sum_{i=1}^{N} R_i
+\]
+\bigbreak
+Where $E(R)$ is the expected return, $N$ is the total number of months, and $R_i$ is the return for each individual month $i$. By applying this formula to the data set, we arrive at a single figure that represents Cisco's average monthly performance and serves as the basis for comparing theoretical predictions with actual market performance. In our instance the value of N is 13, this is because we are calculating over a total of 13 months (from March back to March). $R_i$ is the return value of a specific month, where $i$ is a variable that is substituted with a number 1-13 to represent a month. This means the value of the summation will be the sum of every months return value, when calculated we get the value 0.2546, the final step is to divide our number by our value of N, which is 13 to get a final value of $E(R)$ = 1.96\%.
+
+
+\subsection*{Standard Deviation (Volatility)}
+Next, it is necessary to examine the stock's volatility over the one-year study period. Volatility is a measure of the variability of stock returns and is simply gauged by the standard deviation. The larger the standard deviation, the more fluctuation in return and, therefore, the greater the investment risk. The smaller the standard deviation, the more stable the performance. Standard deviation of monthly returns is obtained using the formula:
+\break
+\[
+\sigma = \sqrt{\frac{1}{N-1} \sum_{i=1}^{N} (R_i - E(R))^2}
+\]
+\bigbreak
+Where $\sigma$ is the standard deviation, $N$ is the number of months, $Ri$ is the return in month $i$, and $E(R)$ is the average (expected) return. This equation determines the degree to which every monthly return differs from the average. In this equation our value for N is 13 (amount of months). The value of the summation is equal to the sum of the difference between the sets monthly returns and expected returns squared. For example for April we would take the return of -0.0587 and find the difference of the expected return 0.0196 which gives us a value of 0.00613 for the month of April. We do this for all remaining months and find the sum of 0.42. Finally, we can divide it by $N-1$, which in our case is 12. Running this calculation gives us $\sigma$ = 3.86\%
+
+\subsection*{Confidence Interval}
+To find out how good the calculated expected return is, we can construct a confidence interval, it provides a range where the actual mean return will lie with a high confidence level—typically 95\%. It is a statistical measure that reports to the investors uncertainty or precision regarding the estimate of average return. A narrow interval would mean higher confidence in the average return as a good forecasting tool for future performance. The formula for the 95\% confidence interval is: \break
+\[
+CI = E(R) \pm z \cdot \frac{\sigma}{\sqrt{N}}
+\]
+\newline
+Where $E(R)$ is the expected (average) return, $\sigma$ is the standard deviation of returns, $N$ is the number of months in the period, and $Z$ is the z-score corresponding to the confidence level of 95\%, which is 1.96. We can substitute our value E(R) into the formula to get 0.0196 $\pm$ 0.0196, we can then add in our calculated values for $\sigma$, 0.0386 and $N$, 13. Calculating these values into the equation determines a 95\% confidence interval for the average return which is between the ranges [-0.37\%, 4.29\%]. This means that there is a 95\% confidence that expected returns will fall between these two values.
+
+\section{ Results: Comparing Actual Returns with Expected Returns}
+\subsection{Experiment}
+From the Stock Data and Monthly Returns graph, we can see that the Return in percentage loosely mimics the graph of the stock value. Generally speaking, when the Price increases the return percentage also increases. Likewise, when the prices decrease the return percentage decreases. This is not true however for when little change was experienced in a month, for instance December 2024 experienced very little change which made the graph decrease from the pervious months high. 
+\newline
+\newline
+In the Expected vs. Actual Returns graph, we can see the varied price in the actual returns vs. the expected return we calculated at $E(R)$ = 1.96\%, we can see only for about half of the months was the actual range close to the expected range. This indicated a lot of variation with the stock, potentially making it a riskier purchase.
+\newline 
+\newline
+Lastly, in the Volatility Over Time graph, we can observe the volatility percentage compared to the stock return. It becomes apparent that the stock volatility in quite high and in 5 months of the 13 the reruns exceed the stock volatility percentage. This means that the stock prices fluctuate by large amount very frequently which is true just from looking at the data, we can see the beginning of 2024 see some deep lows, and the end of 2024 see some peak highs. This means that there is some added risk to this stock due to big flucuations, but that also gives opportunity for bigger profits.
+
+\section*{Visualization}
+\subsection*{Stock Data and Monthly Returns}
+\includegraphics[scale=0.7]{Charts/Stock Data vs Returns.png}
+
+\subsection*{Expected vs Actual Returns}
+\includegraphics[scale=0.30]{Charts/Ecpeted vs actual returns.png}
+
+\subsection*{Volatility Over Time}
+\includegraphics[scale=0.31]{Charts/Volatility.png}
+\bigbreak
+
+
+\section{Conclusion}
+\subsection{Interpretation of Results}
+Cisco Systems, Inc. had a moderate past-year expected return of 1.96\% and a standard deviation of 3.86\%, indicating moderate volatility. The 95\% confidence interval of [-0.37\%, 4.29\%] suggests that returns will most likely remain positive but occasionally turn slightly negative.
+\bigbreak
+In total, Cisco offers stable growth potential with a relatively low risk. It will appeal to those investors who want higher growth but are okay with taking a small risk. While on the other hand some individuals may be deterred by the low likelihood of negative returns.
+\bigbreak
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\begin{thebibliography}{100}
+%List the materials used in the project. e.g., books, papers, web resources, codes, etc. 	
+\bibitem{a1}  
+MarketWatch, “Download CSCO Data | Cisco Systems Inc. Price Data | MarketWatch,” MarketWatch, Apr. 05, 2025. https://www.marketwatch.com/investing/stock/csco/download-data (accessed Apr. 06, 2025).
+‌\newline
+\bibitem{a2}
+plotly, “Online Graph Maker · https://chart-studio.plotly.com/create/\#/ (accessed Apr. 10, 2025).
+‌\newline
+\bibitem{a3}
+W. Kenton, “Value at Risk (VaR) Explained,” Investopedia, Mar. 23, 2023. https://www.investopedia.com/terms/v/var.asp (accessed Apr. 06, 2025)
+\newline
+\bibitem{a4}
+T. Chan, “Long-live the 95\% Confidence Interval,” www.statsig.com, Aug. 04, 2022. https://www.statsig.com/blog/95-percent-confidence-interval
+‌
+\end{thebibliography}
+\end{flushleft}
+\end{flushleft}
+\end{document}
